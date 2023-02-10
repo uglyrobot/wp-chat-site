@@ -109,8 +109,13 @@ export default function Chat() {
     setSources([])
 
     const data = { query: question, format: 'markdown' }
+
+    const headers = {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    }
     if (openAIKey) {
-      data.openai_api_key = openAIKey
+      headers['x-openai-api-key'] = openAIKey
     }
 
     //track ask event
@@ -121,10 +126,7 @@ export default function Chat() {
     try {
       const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify(data),
       })
       if (response.ok) {
