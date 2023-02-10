@@ -41,9 +41,10 @@ export default function Alert({ title, type, children, onClose = noop }) {
   //show whenever params change
   useEffect(() => {
     setShow(true)
+    const ref = alertRef.current
     return () => {
-      if (alertRef.current && type === 'error') {
-        alertRef.current.scrollIntoView({ behavior: 'smooth' })
+      if (ref && type === 'error') {
+        ref.scrollIntoView({ behavior: 'smooth' })
       }
     }
   }, [title, children, type])

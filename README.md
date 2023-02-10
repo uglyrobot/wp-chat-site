@@ -1,10 +1,12 @@
-# Primer
+# ChatWP Site
 
-Primer is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+This is the source code for the [ChatWP](https://wpdocs.chat) website.
+
+The site was built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
 ## Getting started
 
-To get started with this template, first install the npm dependencies:
+To get started with development, first install the npm dependencies:
 
 ```bash
 npm install
@@ -20,11 +22,13 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 ## Customizing
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+You can edit by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+
+
 
 ## License
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+This original site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
 
 ## Learn more
 

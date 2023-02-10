@@ -7,7 +7,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault()
     fetch(
-      'http://track.bentonow.com/forms/a72c79ffb06a248333be6e1de58f63cf/$subscribe',
+      'https://track.bentonow.com/forms/a72c79ffb06a248333be6e1de58f63cf/$subscribe',
       {
         method: 'POST',
         headers: {
@@ -99,7 +99,7 @@ export default function Signup() {
                 </h2>
                 <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
                   Save your spot and get notified when we&rsquo;re launching our
-                  custom chatbot service. We&rsquo;ll be giving special
+                  custom chatbot service for your business or website. We&rsquo;ll be giving special
                   introductory pricing and features to our early users!
                 </p>
               </div>
