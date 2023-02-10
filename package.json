@@ -1,0 +1,34 @@
+{
+  "name": "tailwindui-primer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browserslist": "defaults, not ie <= 11",
+  "dependencies": {
+    "@headlessui/react": "^1.7.8",
+    "@heroicons/react": "^2.0.15",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.12",
+    "clsx": "^1.2.1",
+    "focus-visible": "^5.2.0",
+    "next": "13.0.2",
+    "postcss-focus-visible": "^6.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2",
+    "sass": "^1.58.0",
+    "tailwindcss": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.2",
+    "prettier": "^2.7.0",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}
