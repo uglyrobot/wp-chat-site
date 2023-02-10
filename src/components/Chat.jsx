@@ -37,6 +37,11 @@ const exampleQuestions = [
   'How do I filter post content when it is saved? Show a code example.',
   'List the default WordPress user roles and their capabilities.',
   'Who is the founder of WordPress?',
+  'Show how to use WP CLI to loop through blogs and perform an action on each one.',
+  "What's the difference between posts and pages?",
+  'How do I extend the WordPress REST API?',
+  'Help, my site has been hacked!',
+  'What are custom post types and how do I create one?',
 ]
 
 export default function Chat() {
@@ -310,7 +315,7 @@ export default function Chat() {
                 <button
                   type="submit"
                   tabIndex={2}
-                  className="shadow relative mt-4 inline-flex w-full items-center justify-center space-x-2 rounded-md sm:rounded-r-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-sm font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:-ml-px sm:mt-0 sm:w-32 sm:rounded-none sm:text-lg"
+                  className="shadow relative mt-4 inline-flex w-full items-center justify-center space-x-2 rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-sm font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:-ml-px sm:mt-0 sm:w-32 sm:rounded-none sm:rounded-r-md sm:text-lg"
                 >
                   Ask
                 </button>
