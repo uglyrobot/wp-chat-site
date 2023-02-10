@@ -22,6 +22,8 @@ export default function Signup() {
       .then((data) => {
         console.log('Success:', data)
         setSubmitted(true)
+        //redirect to link
+        window.location.href = 'https://app.bentonow.com/f/a72c79ffb06a248333be6e1de58f63cf/cool-tree-1274'
       })
       .catch((error) => {
         console.error('Error:', error)

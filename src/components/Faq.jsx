@@ -34,7 +34,11 @@ const faqs = [
   {
     question: "Do you have an API I can use?",
     answer: "Not currently for the full chat (internal API is limited), but you can use our embeddings API to build your own tools on top of our index. Contact us for details."
-  }
+  },
+  {
+    question: "What are your privacy protections?",
+    answer: "IPs are stored hashed for ratelimiting purposes. We do store the queries and responses in our database to be able to privide and improve on the service. Queries and responses pass through OpenAI and are subject to their privacy policy as well. If you enter your own OpenAI API key it is only stored in your browser. We use Bento (https://bentonow.com/) for usage tracking and waitlist management.",
+  },
 ]
 
 export default function Faq() {

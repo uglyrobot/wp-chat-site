@@ -33,8 +33,8 @@ const exampleQuestions = [
   'How do you list cron events with WP CLI? Show an example of the output.',
   'What are WordCamps and how do I find one near me?',
   'List the default WordPress blocks.',
-  'Show me how to add a custom block to the WordPress block editor.',
-  'How do I filter post content when it is saved? Show an example of the code.',
+  'Show me how to code a custom block for the WordPress block editor.',
+  'How do I filter post content when it is saved? Show a code example.',
   'List the default WordPress user roles and their capabilities.',
   'Who is the founder of WordPress?',
 ]
@@ -109,8 +109,8 @@ export default function Chat() {
     }
 
     //track ask event
-    if ( window.bento ) {
-        window.bento.track( 'ask', { question, customKey: Boolean(openAIKey) } )
+    if (window.bento) {
+      window.bento.track('ask', { question, customKey: Boolean(openAIKey) })
     }
 
     try {
@@ -265,8 +265,8 @@ export default function Chat() {
               }}
               disabled={loading}
             >
-              <div className="mt-1 flex w-full rounded-md shadow-sm">
-                <div className="relative flex w-full flex-grow items-stretch">
+              <div className="mt-1 w-full rounded-md sm:flex sm:shadow-sm">
+                <div className="relative flex w-full flex-grow items-stretch shadow-sm sm:shadow-inherit">
                   <input
                     type="text"
                     name="query"
@@ -276,16 +276,24 @@ export default function Chat() {
                     minLength={10}
                     required
                     onChange={(e) => setQuestion(e.target.value)}
-                    onClick={() => {
+                    onDoubleClick={() => {
                       //highlight the text
                       document.getElementById('query').select()
                     }}
-                    className="block w-full rounded-none rounded-l-md border-gray-300 pl-6 text-sm focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:text-lg"
+                    onKeyDown={(e) => {
+                      //submit on enter
+                      if (e.key === 'Enter') {
+                        askQuestion()
+                      }
+                    }}
+                    tabIndex={1}
+                    className="block w-full rounded-md border-gray-300 py-4  pl-4 pr-10 text-sm focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:rounded-none sm:rounded-l-md sm:py-0 sm:pl-6 sm:pr-12 sm:text-lg"
                     placeholder="What do you want to know about WordPress?"
                   />
                   <button
                     className="absolute inset-y-0 right-0 flex items-center px-4"
                     title="Random Question"
+                    tabIndex={3}
                     onClick={(e) => {
                       e.preventDefault()
                       //insert a random question
@@ -296,12 +304,13 @@ export default function Chat() {
                       )
                     }}
                   >
-                    <ArrowPathIcon className="h-6 w-6 text-gray-400 hover:rotate-6 hover:brightness-110 active:brightness-110" />
+                    <ArrowPathIcon className="h-4 w-4 text-gray-400 hover:rotate-12 hover:brightness-110 active:brightness-110 sm:h-6 sm:w-6" />
                   </button>
                 </div>
                 <button
                   type="submit"
-                  className="shadow relative -ml-px inline-flex w-28 items-center justify-center space-x-2 rounded-r-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-sm font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:w-32 sm:text-lg"
+                  tabIndex={2}
+                  className="shadow relative mt-4 inline-flex w-full items-center justify-center space-x-2 rounded-md sm:rounded-r-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-sm font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:-ml-px sm:mt-0 sm:w-32 sm:rounded-none sm:text-lg"
                 >
                   Ask
                 </button>
@@ -364,6 +373,25 @@ export default function Chat() {
                 ))}
               </div>
             </div>
+            <p className="mt-12 text-sm text-gray-700">
+              Help contribute to WordPress (and improve this bot) by joining the{' '}
+              <Link
+                href="https://make.wordpress.org/docs/"
+                target="_blank"
+                className="underline"
+              >
+                Documentation
+              </Link>{' '}
+              or{' '}
+              <Link
+                href="https://learn.wordpress.org/contribute/"
+                target="_blank"
+                className="underline"
+              >
+                Training
+              </Link>{' '}
+              teams!
+            </p>
           </>
         )}
       </div>
