@@ -197,9 +197,21 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="hidden md:flex md:items-center md:space-x-6">
+                <Link
+                href="https://www.producthunt.com/posts/chatwp-the-wordpress-docs-chatbot?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatwp&#0045;the&#0045;wordpress&#0045;docs&#0045;chatbot"
+                target="_blank"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379055&theme=neutral"
+                  alt="ChatWP&#0032;&#0045;&#0032;The&#0032;WordPress&#0032;Docs&#0032;Chatbot - Get&#0032;direct&#0032;answers&#0032;to&#0032;your&#0032;WordPress&#0032;questions&#0032;for&#0032;free&#0033; | Product Hunt"
+                  style={{ width: '250px', height: '54px' }}
+                  width="250"
+                  height="54"
+                />
+              </Link>
                   <a
                     href="#waitlist"
-                    className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
+                    className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white hover:bg-gray-700"
                   >
                     Waitlist
                   </a>
@@ -302,7 +314,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                </div>
+                  </div>
               </div>
             </div>
 
