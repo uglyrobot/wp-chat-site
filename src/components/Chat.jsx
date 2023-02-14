@@ -324,6 +324,29 @@ export default function Chat() {
               </div>
             </form>
           )}
+
+          {!resultHtml && (
+            <div className="text-left mt-8 max-w-7xl mx-auto">
+              <h3 className="text-xl font-medium leading-6 text-gray-900">
+                Tips:
+              </h3>
+              <ul className="mt-4 list-disc ml-6 text-left">
+                <li className="text-md text-gray-500">
+                  Ask me full questions, I'm not a search engine! Don't ask me "pre_get_comments", ask me "How do I use the pre_get_comments hook?"
+                </li>
+                <li className="text-md text-gray-500">
+                  Tell me how to respond, like "with code examples", "as a
+                  list", "as a table with the columns name, description", "in
+                  Spanish", "with a rhyming poem".
+                </li>
+                <li className="text-md text-gray-500">
+                  I'm only allowed to answer questions about WordPress that I've
+                  learned from WordPress.org documentation. I can't answer questions about
+                  specific plugins or themes.
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
 
         {resultHtml && (
