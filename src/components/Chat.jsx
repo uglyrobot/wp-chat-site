@@ -33,7 +33,6 @@ const exampleQuestions = [
   'How do you list cron events with WP CLI? Show an example of the output.',
   'What are WordCamps and how do I find one near me?',
   'List the default WordPress blocks.',
-  'Show me how to code a custom block for the WordPress block editor.',
   'How do I filter post content when it is saved? Show a code example.',
   'List the default WordPress user roles and their capabilities.',
   'Who is the founder of WordPress?',
@@ -42,6 +41,7 @@ const exampleQuestions = [
   'How do I extend the WordPress REST API?',
   'Help, my site has been hacked!',
   'What are custom post types and how do I create one?',
+  'What is the difference between wordpress.org and wordpress.com?',
 ]
 
 export default function Chat() {
@@ -332,12 +332,12 @@ export default function Chat() {
               </h3>
               <ul className="mt-4 list-disc ml-6 text-left">
                 <li className="text-md text-gray-500">
-                  Ask me full questions, I'm not a search engine! Don't ask me "pre_get_comments", ask me "How do I use the pre_get_comments hook?"
+                  Ask me full questions, I'm not a search engine! Don't ask me "install plugin", ask me "How do I install a plugin?"
                 </li>
                 <li className="text-md text-gray-500">
                   Tell me how to respond, like "with code examples", "as a
-                  list", "as a table with the columns name, description", "in
-                  Spanish", "with a rhyming poem".
+                  list", "in
+                  Spanish", or "with a poem".
                 </li>
                 <li className="text-md text-gray-500">
                   I'm only allowed to answer questions about WordPress that I've
