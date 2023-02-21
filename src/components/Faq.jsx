@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Where is ChatWP getting it's information?",
     answer:
-      'We built a webcrawler to scrape all official documentation from the WordPress.org website. This includes the "Learn WordPress" tutorials and lesson plans, all articles on the "Documentation" pages (wordpress.org/documentation/), and the entire "Developer" site (developer.wordpress.org) with code references, handbooks, and commands.',
+      'We built a webcrawler to scrape all official documentation from the WordPress.org website. This includes the "Learn WordPress" tutorials and lesson plans, all articles on the "Documentation" pages (wordpress.org/documentation/), and the entire "Developer" site (developer.wordpress.org) with code references, handbooks, and commands. It is also allowed to use general knowledge about WordPress learned from the Internet with restrictions.',
   },
   {
     question: "Does it work with languages other than English?",
@@ -15,12 +15,12 @@ const faqs = [
   {
     question: 'How does ChatWP work?',
     answer:
-      "It's a bit technical, but here is a brief overview. We use OpenAI's GPT-3.5 embedding and completion APIs, as well as a vector database to store our index. All scraped documentation is cleaned up and divided into smaller chunks and labeled by source. We then use the GPT embedding API to generate a vector representation of each chunk and store it in our vector db index. When a user asks a question, convert it to an embedding, and use the vector database to find the closest matchs to the user's query. Then we take the most relevant chunks, included them as context along with the original question, and use the GPT completion API to generate a response in markdown format that we then convert to HTML and display to the user.",
+      "It's a bit technical, but here is a brief overview. We use OpenAI's GPT-3.5 embedding and completion APIs, as well as a vector database to store our index. All scraped documentation is cleaned up and divided into smaller chunks and labeled by source. We then use the GPT embedding API to generate a vector representation of each chunk and store it in our vector db index. When a user asks a question, we convert it to an embedding, and use the vector database to find the closest matches to the user's query using semantic search. Then we then take the most relevant chunks, included them as context along with the original question, and use the GPT completion API to generate a response in markdown format that we then convert to HTML and display to the user.",
   },
   {
     question: 'How much does it cost to run?',
     answer:
-      'It took about 24hrs and $5 to build the vector index. Queries cost about $0.02-$0.04 each depending on how long the context, query, and response is. We also have to pay for the API servers to handle requests. We are covering the costs for this at the moment until we run out of money!',
+      'It took about 24hrs and $5 to build the vector index. Queries cost about $0.02-$0.04 each depending on how long the context, query, and response is. We also have to pay for the site and API servers to handle requests. We are covering the costs for this at the moment as a service to the community.',
   },
   {
     question: "Are you stealing WordPress contributor's content?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "Do you have an API I can use?",
-    answer: "Not currently for the full chat (internal API is limited), but you can use our embeddings API to build your own tools on top of our index. Contact us for details."
+    answer: "Not currently for the full chat (internal API is limited), but you can use our embeddings API to build your own tools on top of our index. Contact us for details. Join our waitlist to be notified when we launch the API for creating custom chatbots for your own documentation."
   },
   {
     question: "What are your privacy protections?",

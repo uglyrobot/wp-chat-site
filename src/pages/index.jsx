@@ -198,11 +198,11 @@ export default function Home() {
                 </div>
                 <div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
-                href="https://www.producthunt.com/posts/chatwp-the-wordpress-docs-chatbot?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatwp&#0045;the&#0045;wordpress&#0045;docs&#0045;chatbot"
+                href="https://www.producthunt.com/posts/chatwp?utm_source=badge-top-post-topic-badge&utm_medium=badge&utm_souce=badge-chatwp"
                 target="_blank"
               >
                 <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379055&theme=neutral"
+                  src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=379055&theme=neutral&period=weekly&topic_id=268"
                   alt="ChatWP&#0032;&#0045;&#0032;The&#0032;WordPress&#0032;Docs&#0032;Chatbot - Get&#0032;direct&#0032;answers&#0032;to&#0032;your&#0032;WordPress&#0032;questions&#0032;for&#0032;free&#0033; | Product Hunt"
                   style={{ width: '250px', height: '54px' }}
                   width="250"
@@ -387,11 +387,9 @@ export default function Home() {
                   <div className="mx-auto max-w-md px-6 sm:max-w-3xl lg:h-full lg:p-0">
                     <div className="aspect-w-10 aspect-h-6 sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none overflow-hidden rounded-xl shadow-xl lg:h-full">
                       <Image
-                        className="object-cover lg:h-full lg:w-full"
+                        className="object-cover lg:h-full lg:w-full relative"
                         src={avatar}
                         alt="Aaron Edwards avatar"
-                        width={500}
-                        height={500}
                       />
                     </div>
                   </div>
@@ -423,8 +421,8 @@ export default function Home() {
                           >
                             WPMU DEV
                           </Link>
-                          . He just loves building cool things with and for
-                          WordPress, AI, and Web3.
+                          . "I just love building cool things with and for
+                          WordPress, AI, and Web3."
                         </p>
                       </div>
                       <footer className="mt-6">
