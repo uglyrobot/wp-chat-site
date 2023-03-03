@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 export default function Signup() {
   const [email, setEmail] = useState('')
@@ -6,24 +8,22 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch(
-      'https://track.bentonow.com/forms/a72c79ffb06a248333be6e1de58f63cf/$subscribe',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      }
-    )
+    fetch('/api/waitlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    })
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data)
         setSubmitted(true)
         //redirect to link
-        window.location.href = 'https://app.bentonow.com/f/a72c79ffb06a248333be6e1de58f63cf/cool-tree-1274'
+        window.location.href =
+          'https://app.bentonow.com/f/a72c79ffb06a248333be6e1de58f63cf/cool-tree-1274'
       })
       .catch((error) => {
         console.error('Error:', error)
@@ -32,7 +32,7 @@ export default function Signup() {
   }
 
   return (
-    <div id="waitlist" className="bg-white">
+    <div id="signup" className="bg-white">
       <div className="relative sm:py-16">
         <div aria-hidden="true" className="hidden sm:block">
           <div className="absolute inset-y-0 left-0 w-1/2 rounded-r-3xl bg-gray-50" />
@@ -100,15 +100,15 @@ export default function Signup() {
                   Join the Waitlist
                 </h2>
                 <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
-                  Save your spot and get notified when we&rsquo;re launching our
-                  custom chatbot service for your business or website. We&rsquo;ll be giving special
+                  We are launching DocsBot in a matter of days. Save your spot and be
+                  the first to be notified. We&rsquo;ll be giving special
                   introductory pricing and features to our early users!
                 </p>
               </div>
               {submitted ? (
                 <div className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
                   <div className="min-w-0 flex-1">
-                    <p className="text-center text-3xl font-medium text-white">
+                    <p className="text-center text-2xl font-medium text-white">
                       Thanks for signing up! We'll be in touch soon.
                     </p>
                   </div>
@@ -129,7 +129,7 @@ export default function Signup() {
                       value={email}
                       required
                       onChange={(e) => setEmail(e.target.value)}
-                      className="block w-full rounded-md border border-transparent px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+                      className="block w-full rounded-md border border-transparent px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -143,6 +143,15 @@ export default function Signup() {
                   </div>
                 </form>
               )}
+              <div className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
+                <Link
+                  href="https://docsbot.ai"
+                  className="mx-auto flex items-center text-2xl text-white hover:underline"
+                >
+                  <span>Find out more about DocsBot AI</span>
+                  <ArrowRightIcon className="h-5 w-5 ml-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

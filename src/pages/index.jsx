@@ -2,14 +2,17 @@ import { Fragment, useEffect, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  ChatBubbleLeftRightIcon,
-  CodeBracketIcon,
-  CogIcon,
-  DocumentMagnifyingGlassIcon,
-  PencilSquareIcon,
   ShieldCheckIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
+import {
+  ChatBubbleLeftRightIcon,
+  PencilSquareIcon,
+  Cog6ToothIcon,
+  CogIcon,
+  LifebuoyIcon,
+  ChatBubbleLeftEllipsisIcon,
+} from '@heroicons/react/20/solid'
 import imajinnLogo from '@/images/chatwp.svg'
 import imajinnDarkLogo from '@/images/chatwp.svg'
 import qaHeader from '@/images/qa-illustration-teal-cyan.svg'
@@ -24,40 +27,40 @@ import Chat from '@/components/Chat'
 const navigation = []
 const features = [
   {
-    name: 'Support Docs',
+    name: 'Question/Answer Bots',
     description:
-      'Index your support docs in minutes with our crawler. No coding required. Just add your content and you are ready to go.',
-    icon: DocumentMagnifyingGlassIcon,
+      'Make you documentation interactive with our Q/A bot. Get detailed and direct answers about your product, including code examples and formatted output.',
+    icon: ChatBubbleLeftEllipsisIcon,
   },
   {
-    name: 'Code',
+    name: 'Embeddable Widgets',
     description:
-      'Our GitHub integration allows you to index your code documentation in minutes, and monitor for updates.',
-    icon: CodeBracketIcon,
+      'We make it simple to add DocsBot chats to your website in minutes. Just add a script tag or WordPress plugin and you are ready to go. (coming soon)',
+    icon: ChatBubbleLeftRightIcon,
   },
   {
-    name: 'Blog Posts',
+    name: 'Custom Copywriting',
     description:
-      "We'll train our AI on your blog content via WordPress exports or RSS feeds. A simple way to surface your best content to those looking for answers.",
+      'Need help writing marketing copy and blog posts? With DocsBot, you can do that too. Use a customized ChatGPT that knows everything about your product, so it can help you generate high-quality content in no time.',
     icon: PencilSquareIcon,
   },
   {
-    name: 'Internal Knowledge Base',
+    name: 'Reply to Support Tickets',
     description:
-      'Employees spend a huge percentage of their time just searching for what they need. Our AI can help them find answers instantly by indexing your internal knowledge base and documentation.',
+      'Tired of writing the same responses to support tickets over and over again? Train your DocBot on your support history and docs so it can reply to new tickets automatically, saving you time and money.',
+    icon: LifebuoyIcon,
+  },
+  {
+    name: 'Internal Knowledge Bases',
+    description:
+      'Employees spend too much time just searching for what they need. DocsBot can help them find answers instantly by indexing your internal knowledge base and documentation.',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Powerful API',
     description:
       'Our API allows you to integrate AI chat into your own products. Provide answers to your users from your site, app, or WordPress plugin.',
-    icon: CogIcon,
-  },
-  {
-    name: 'Embeddable Widget',
-    description:
-      'Our embeddable widget allows you to add AI chat to your website in minutes. Just add a script tag and you are ready to go.',
-    icon: ChatBubbleLeftRightIcon,
+    icon: Cog6ToothIcon,
   },
 ]
 
@@ -210,7 +213,7 @@ export default function Home() {
                 />
               </Link>
                   <a
-                    href="#waitlist"
+                    href="#signup"
                     className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white hover:bg-gray-700"
                   >
                     Waitlist
@@ -262,7 +265,7 @@ export default function Home() {
                     </div>
                     <div className="mt-6 px-5">
                       <a
-                        href="#waitlist"
+                        href="#signup"
                         className="shadow block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-medium text-white hover:from-teal-600 hover:to-cyan-700"
                       >
                         Waitlist
@@ -320,55 +323,40 @@ export default function Home() {
 
             <Chat />
 
-            {/* Feature section with grid */}
-            <div className="relative bg-white pt-16 pb-12 sm:pt-24 lg:pt-32">
-              <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                <h2 className="text-lg font-semibold text-cyan-600">
-                  Does your business have docs for your customers or team?
-                </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Custom chatbots made easy with a simple API
-                </p>
-                <p className="mx-auto mt-5 max-w-7xl text-xl text-gray-500">
-                  Imagine having the power to build your own custom chatbot for
-                  your business, just like ChatWP! With the new service we are
-                  developing, you can easily index your documentation, blog
-                  posts, or any other content with just a few clicks. Our intuitive interface makes it a breeze to create
-                  your own Q&A and chatbots from your data that can be integrated into
-                  your website, WordPress, app/plugin, Slack, or anywhere else you want to
-                  use them, all through our simple API. Join the future and revolutionize the way you interact
-                  with your customers.{' '}
-                  <Link href="#waitlist" className="underline">
-                    Join our waitlist now
-                  </Link>{' '}
-                  and be the first to know when we launch!
-                </p>
-                <div className="mt-12">
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {features.map((feature) => (
-                      <div key={feature.name} className="pt-6">
-                        <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-                          <div className="-mt-6">
-                            <div>
-                              <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 p-3 shadow-lg">
-                                <feature.icon
-                                  className="h-6 w-6 text-white"
-                                  aria-hidden="true"
-                                />
-                              </span>
-                            </div>
-                            <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
-                              {feature.name}
-                            </h3>
-                            <p className="mt-5 text-base text-gray-500">
-                              {feature.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+            {/* Feature section with screenshot */}
+            <div id="features" className="bg-gray-50 py-24 sm:py-32">
+              <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
+                <div className="">
+                  <h2 className="text-lg font-semibold text-cyan-600">
+                    ChatGPT-powered customer support
+                  </h2>
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Train and deploy custom chatbots in minutes!
+                  </p>
+                  <p className="mx-auto mt-5 max-w-7xl text-xl text-gray-500">
+                    Are you tired of answering the same questions over and over again? Do you wish
+                    you had a way to automate your customer support and give your team more time to
+                    focus on other tasks? With DocsBot, you can do just that. We make it simple to
+                    build ChatGPT-powered bots that are trained with your content and documentation,
+                    so they can provide instant answers to your customers' most detailed questions.
+                  </p>
                 </div>
+              </div>
+              <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+                <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="relative pl-9">
+                      <dt className="inline font-semibold text-gray-900">
+                        <feature.icon
+                          className="absolute top-1 left-1 h-5 w-5 text-cyan-600"
+                          aria-hidden="true"
+                        />
+                        {feature.name}
+                      </dt>{' '}
+                      <dd className="inline">{feature.description}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </div>
 
