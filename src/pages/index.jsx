@@ -324,14 +324,17 @@ export default function Home() {
             <Chat />
 
             {/* Feature section with screenshot */}
-            <div id="features" className="bg-gray-50 py-24 sm:py-32">
+            <div id="features" className="bg-white py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
                 <div className="">
                   <h2 className="text-lg font-semibold text-cyan-600">
                     ChatGPT-powered customer support
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Train and deploy custom chatbots in minutes!
+                    Train and deploy custom chatbots with <Link
+                            href="https://docsbot.ai"
+                            className="underline"
+                          >DocsBot AI</Link>!
                   </p>
                   <p className="mx-auto mt-5 max-w-7xl text-xl text-gray-500">
                     Are you tired of answering the same questions over and over again? Do you wish
