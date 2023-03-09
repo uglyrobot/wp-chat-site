@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "Do you have an API I can use?",
-    answer: "Not currently for the full chat (internal API is limited), but you can use our embeddings API to build your own tools on top of our index. Contact us for details. Join our waitlist to be notified when we launch the API for creating custom chatbots for your own documentation."
+    answer: "Not currently for the full chat (internal API is limited), but you can use our embeddings API to build your own tools on top of our index. Contact us for details. Try DocsBot API for creating custom chatbots for your own documentation."
   },
   {
     question: "What are your privacy protections?",

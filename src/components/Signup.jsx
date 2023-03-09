@@ -97,52 +97,12 @@ export default function Signup() {
             <div className="relative">
               <div className="sm:text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Join the Waitlist
+                  Now available!
                 </h2>
                 <p className="mx-auto mt-6 max-w-2xl text-lg text-white">
-                  We are launching DocsBot in a matter of days. Save your spot and be
-                  the first to be notified. We&rsquo;ll be giving special
-                  introductory pricing and features to our early users!
+                  DocsBot beta is now available. Try it free and see how it can help your business.
                 </p>
               </div>
-              {submitted ? (
-                <div className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
-                  <div className="min-w-0 flex-1">
-                    <p className="text-center text-2xl font-medium text-white">
-                      Thanks for signing up! We'll be in touch soon.
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <form
-                  action="#"
-                  className="mt-12 sm:mx-auto sm:flex sm:max-w-lg"
-                  onSubmit={handleSubmit}
-                >
-                  <div className="min-w-0 flex-1">
-                    <label htmlFor="cta-email" className="sr-only">
-                      Email address
-                    </label>
-                    <input
-                      id="cta-email"
-                      type="email"
-                      value={email}
-                      required
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="block w-full rounded-md border border-transparent px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div className="mt-4 sm:mt-0 sm:ml-3">
-                    <button
-                      type="submit"
-                      className="shadow block w-full rounded-md border border-cyan-600 bg-gradient-to-b from-teal-300 to-cyan-400 px-5  py-3 text-center text-base font-medium text-cyan-900 hover:bg-teal-200 hover:from-teal-200 hover:to-cyan-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cyan-600 sm:px-10"
-                    >
-                      Notify me
-                    </button>
-                  </div>
-                </form>
-              )}
               <div className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
                 <Link
                   href="https://docsbot.ai"
