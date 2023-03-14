@@ -213,7 +213,7 @@ export default function Home() {
                 />
               </Link>
                   <a
-                    href="https://docsbot.ai"
+                    href="https://docsbot.ai?utm_source=buffer&utm_medium=referral&utm_campaign=ChatWP"
                     className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white hover:bg-gray-700"
                   >
                     Create your own
@@ -265,10 +265,10 @@ export default function Home() {
                     </div>
                     <div className="mt-6 px-5">
                       <a
-                        href="#signup"
+                        href="https://docsbot.ai?utm_source=buffer&utm_medium=referral&utm_campaign=ChatWP"
                         className="shadow block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-medium text-white hover:from-teal-600 hover:to-cyan-700"
                       >
-                        Waitlist
+                        Create your own
                       </a>
                     </div>
                   </div>
@@ -332,7 +332,7 @@ export default function Home() {
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Train and deploy custom chatbots with <Link
-                            href="https://docsbot.ai"
+                            href="https://docsbot.ai?utm_source=buffer&utm_medium=referral&utm_campaign=ChatWP"
                             className="underline"
                           >DocsBot AI</Link>!
                   </p>

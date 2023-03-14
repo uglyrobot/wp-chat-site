@@ -1,25 +1,8 @@
 import 'focus-visible'
 import '@/styles/tailwind.scss'
 import Head from 'next/head'
-import Script from 'next/script'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter()
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      if (window.bento !== undefined) {
-        window.bento.view()
-      }
-    }
-
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
 
   return (
     <>
@@ -48,11 +31,6 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       <Component {...pageProps} />
-      <Script
-        id="bento-script"
-        src={'https://fast.bentonow.com?site_uuid=a72c79ffb06a248333be6e1de58f63cf'}
-        strategy="afterInteractive"
-      />
     </>
   )
 }
