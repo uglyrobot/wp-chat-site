@@ -105,7 +105,7 @@ export default function Signup() {
               </div>
               <div className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
                 <Link
-                  href="https://docsbot.ai?utm_source=buffer&utm_medium=referral&utm_campaign=ChatWP"
+                  href="https://docsbot.ai?utm_source=ChatWP&utm_medium=referral&utm_campaign=ChatWP"
                   className="mx-auto flex items-center text-2xl text-white hover:underline"
                 >
                   <span>Find out more about DocsBot AI</span>
