@@ -214,7 +214,7 @@ export default function Chat() {
     return (
       <div className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
         <div className="flex-shrink-0">
-          <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 p-3 shadow-lg">
+          <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-indigo-500 to-fuchsia-600 p-3 shadow-lg">
             <SourceIcon className="h-6 w-6 text-white" aria-hidden="true" />
           </span>
         </div>
@@ -246,7 +246,7 @@ export default function Chat() {
     <div id="ask" className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
         <div>
-          <h2 className="text-lg font-semibold text-cyan-600">Let's chat</h2>
+          <h2 className="text-lg font-semibold text-fuchsia-600">Let's chat</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Ask me about WordPress
           </p>
@@ -264,13 +264,13 @@ export default function Chat() {
             <>
               <div className="mt-6 flex justify-center">
                 <div className="relative w-20">
-                  <ChatBubbleLeftEllipsisIcon className="absolute m-6 h-8 w-8 animate-pulse text-teal-500" />
-                  <div className="h-20 w-20 rounded-full border-2 border-teal-400"></div>
-                  <div className="absolute left-0 top-0 h-20 w-20 animate-spin rounded-full border-t-4 border-cyan-600"></div>
+                  <ChatBubbleLeftEllipsisIcon className="absolute m-6 h-8 w-8 animate-pulse text-indigo-500" />
+                  <div className="h-20 w-20 rounded-full border-2 border-indigo-400"></div>
+                  <div className="absolute left-0 top-0 h-20 w-20 animate-spin rounded-full border-t-4 border-fuchsia-600"></div>
                 </div>
               </div>
               <blockquote
-                className="mt-2 text-center text-sm text-cyan-800"
+                className="mt-2 text-center text-sm text-fuchsia-800"
                 title="AI-generated loading phrase"
               >
                 "{loadingPhrase}"
@@ -305,7 +305,7 @@ export default function Chat() {
                     }}
                     tabIndex={1}
                     autoComplete="off"
-                    className="block w-full rounded-md border-gray-300 py-4  pl-4 pr-10 text-sm focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:rounded-none sm:rounded-l-md sm:py-0 sm:pl-6 sm:pr-12 sm:text-lg"
+                    className="block w-full rounded-md border-gray-300 py-4  pl-4 pr-10 text-sm focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:rounded-none sm:rounded-l-md sm:py-0 sm:pl-6 sm:pr-12 sm:text-lg"
                     placeholder="What do you want to know about WordPress?"
                   />
                   <button
@@ -331,7 +331,7 @@ export default function Chat() {
                 <button
                   type="submit"
                   tabIndex={2}
-                  className="shadow relative mt-4 inline-flex w-full items-center justify-center space-x-2 rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-sm font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:-ml-px sm:mt-0 sm:w-32 sm:rounded-none sm:rounded-r-md sm:text-lg"
+                  className="shadow relative mt-4 inline-flex w-full items-center justify-center space-x-2 rounded-md bg-gradient-to-r from-indigo-500 to-fuchsia-500 py-3 px-4 text-sm font-bold text-white hover:from-indigo-600 hover:to-fuchsia-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-gray-900 sm:-ml-px sm:mt-0 sm:w-32 sm:rounded-none sm:rounded-r-md sm:text-lg"
                 >
                   Ask
                 </button>
@@ -387,7 +387,7 @@ export default function Chat() {
                     type="button"
                     onClick={() => setRating(1)}
                     disabled={rating === 1}
-                    className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 disabled:text-cyan-600"
+                    className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2 disabled:text-fuchsia-600"
                   >
                     <span className="sr-only">Downvote</span>
                     <HandThumbUpIcon className="h-6 w-6" aria-hidden="true" />
@@ -396,7 +396,7 @@ export default function Chat() {
                     type="button"
                     onClick={() => setRating(-1)}
                     disabled={rating === -1}
-                    className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 disabled:text-cyan-600"
+                    className="rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2 disabled:text-fuchsia-600"
                   >
                     <span className="sr-only">Upvote</span>
                     <HandThumbDownIcon className="h-6 w-6" aria-hidden="true" />
@@ -436,7 +436,7 @@ export default function Chat() {
               </Link>{' '}
               teams!
             </p>
-            <p className="mt-6 text-sm font-semibold text-cyan-700">
+            <p className="mt-6 text-sm font-semibold text-fuchsia-700">
               <Link
                 href="https://docsbot.ai?utm_source=ChatWP&utm_medium=referral&utm_campaign=ChatWP"
                 className="underline"

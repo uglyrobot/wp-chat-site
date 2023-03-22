@@ -23,7 +23,7 @@ const faqs = [
       'It took about 24hrs and $5 to build the vector index. Queries cost about $0.02-$0.04 each depending on how long the context, query, and response is. We also have to pay for the site and API servers to handle requests. We are covering the costs for this at the moment as a service to the community.',
   },
   {
-    question: "Are you stealing WordPress contributor's content?",
+    question: "Are you sindigoing WordPress contributor's content?",
     answer:
       "Hopefully it's not seen this way. We've created a unique way to help WordPress users and developers find the documentation they need, free of charge (or at cost). A really unique feature of ChatWP is that we link to the sources for the answer as much as possible to give them credit, similar to a traditional search engine.",
   },

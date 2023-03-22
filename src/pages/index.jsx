@@ -15,7 +15,8 @@ import {
 } from '@heroicons/react/20/solid'
 import imajinnLogo from '@/images/chatwp.svg'
 import imajinnDarkLogo from '@/images/chatwp.svg'
-import qaHeader from '@/images/qa-illustration-teal-cyan.svg'
+//import qaHeader from '@/images/qa-illustration-teal-cyan.svg'
+import qaHeader from '@/images/qa-header.png'
 import avatar from '@/images/avatars/aaroned.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -245,7 +246,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
+                      <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fuchsia-600">
                         <span className="sr-only">Close menu</span>
                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -266,7 +267,7 @@ export default function Home() {
                     <div className="mt-6 px-5">
                       <a
                         href="https://docsbot.ai?utm_source=ChatWP&utm_medium=referral&utm_campaign=ChatWP"
-                        className="shadow block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-medium text-white hover:from-teal-600 hover:to-cyan-700"
+                        className="shadow block w-full rounded-md bg-gradient-to-r from-indigo-500 to-fuchsia-600 py-3 px-4 text-center font-medium text-white hover:from-indigo-600 hover:to-fuchsia-700"
                       >
                         Create your own
                       </a>
@@ -286,7 +287,7 @@ export default function Home() {
                         <span className="block text-6xl sm:text-8xl">
                           ChatWP
                         </span>
-                        <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-4xl text-transparent sm:pb-5 sm:text-5xl">
+                        <span className="block bg-gradient-to-r from-indigo-300 to-fuchsia-400 bg-clip-text pb-3 text-4xl text-transparent sm:pb-5 sm:text-5xl">
                           The WordPress docs chatbot
                         </span>
                       </h1>
@@ -300,9 +301,9 @@ export default function Home() {
                         <a
                           href="#ask"
                           type="button"
-                          className="shadow block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-bold text-white hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                          className="shadow block w-full rounded-md bg-gradient-to-r from-indigo-500 to-fuchsia-600 py-3 px-4 text-center font-bold text-white hover:from-indigo-600 hover:to-fuchsia-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                         >
-                          Ask me anything
+                          Ask me anything about WordPress
                         </a>
                       </div>
                     </div>
@@ -327,7 +328,7 @@ export default function Home() {
             <div id="features" className="bg-white py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
                 <div className="">
-                  <h2 className="text-lg font-semibold text-cyan-600">
+                  <h2 className="text-lg font-semibold text-fuchsia-600">
                     ChatGPT-powered customer support
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -351,7 +352,7 @@ export default function Home() {
                     <div key={feature.name} className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
                         <feature.icon
-                          className="absolute top-1 left-1 h-5 w-5 text-cyan-600"
+                          className="absolute top-1 left-1 h-5 w-5 text-fuchsia-600"
                           aria-hidden="true"
                         />
                         {feature.name}
@@ -368,7 +369,7 @@ export default function Home() {
             <Faq />
 
             {/* Testimonial section */}
-            <div className="mb-32 bg-gradient-to-r from-teal-500 to-cyan-600 pb-16 lg:relative lg:z-10 lg:pb-0">
+            <div className="mb-32 bg-gradient-to-r from-indigo-500 to-fuchsia-600 pb-16 lg:relative lg:z-10 lg:pb-0">
               <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
                 <div className="relative lg:-my-8">
                   <div
@@ -417,7 +418,7 @@ export default function Home() {
                         </p>
                       </div>
                       <footer className="mt-6">
-                        <p className="text-base font-medium text-cyan-100">
+                        <p className="text-base font-medium text-fuchsia-100">
                           <Link
                             href="https://twitter.com/UglyRobotDev"
                             className="flex items-center"

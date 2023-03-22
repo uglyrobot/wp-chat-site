@@ -57,7 +57,7 @@ export default function Signup() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-teal-200"
+                  className="text-indigo-200"
                   fill="currentColor"
                 />
               </pattern>
@@ -70,7 +70,7 @@ export default function Signup() {
           </svg>
         </div>
         <div className="mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-7xl lg:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-cyan-600 px-6 py-10 shadow-xl sm:px-12 sm:py-20">
+          <div className="relative overflow-hidden rounded-2xl bg-fuchsia-600 px-6 py-10 shadow-xl sm:px-12 sm:py-20">
             <div
               aria-hidden="true"
               className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
@@ -83,12 +83,12 @@ export default function Signup() {
                 viewBox="0 0 1463 360"
               >
                 <path
-                  className="text-teal-500 text-opacity-40"
+                  className="text-indigo-500 text-opacity-40"
                   fill="currentColor"
                   d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
                 />
                 <path
-                  className="text-cyan-700 text-opacity-40"
+                  className="text-fuchsia-700 text-opacity-40"
                   fill="currentColor"
                   d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
                 />

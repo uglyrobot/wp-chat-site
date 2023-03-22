@@ -31,11 +31,11 @@ export default function Alert({ title, type, children, onClose = noop }) {
   } else {
     icon = (
       <InformationCircleIcon
-        className="h-5 w-5 text-blue-400"
+        className="h-5 w-5 text-fuchsia-400"
         aria-hidden="true"
       />
     )
-    color = 'blue'
+    color = 'fuchsia'
   }
 
   //show whenever params change
@@ -62,7 +62,7 @@ export default function Alert({ title, type, children, onClose = noop }) {
           ? 'bg-yellow-50'
           : type === 'success'
           ? 'bg-green-50'
-          : 'bg-blue-50')
+          : 'bg-fuchsia-50')
       }
       ref={alertRef}
     >
@@ -78,7 +78,7 @@ export default function Alert({ title, type, children, onClose = noop }) {
                 ? 'text-yellow-800'
                 : type === 'success'
                 ? 'text-green-800'
-                : 'text-blue-800')
+                : 'text-fuchsia-800')
             }
           >
             {title}
@@ -93,7 +93,7 @@ export default function Alert({ title, type, children, onClose = noop }) {
                   ? 'text-yellow-700'
                   : type === 'success'
                   ? 'text-green-700'
-                  : 'text-blue-700')
+                  : 'text-fuchsia-700')
               }
             >
               {children}
@@ -116,7 +116,7 @@ export default function Alert({ title, type, children, onClose = noop }) {
                   ? 'bg-yellow-50 text-yellow-500 hover:bg-yellow-100 focus:ring-yellow-600 focus:ring-offset-yellow-50'
                   : type === 'success'
                   ? 'bg-green-50 text-green-500 hover:bg-green-100 focus:ring-green-600 focus:ring-offset-green-50'
-                  : 'bg-blue-50 text-blue-500 hover:bg-blue-100 focus:ring-blue-600 focus:ring-offset-blue-50')
+                  : 'bg-fuchsia-50 text-fuchsia-500 hover:bg-fuchsia-100 focus:ring-fuchsia-600 focus:ring-offset-fuchsia-50')
               }
             >
               <span className="sr-only">Dismiss</span>
