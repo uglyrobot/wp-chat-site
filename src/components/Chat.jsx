@@ -41,7 +41,6 @@ const exampleQuestions = [
   'List the default WordPress user roles and descriptions in a table.',
   'Who created WordPress?',
   'Show me example code for filtering the_content.',
-  'Show how to use WP CLI to loop through blogs and perform an action on each one.',
   "What's the difference between posts and pages?",
   'How do I extend the WordPress REST API?',
   'Help, my site has been hacked!',
