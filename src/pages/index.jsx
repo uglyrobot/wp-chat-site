@@ -392,7 +392,11 @@ export default function Home() {
                       <div>
                         <p className="mt-6 text-2xl font-medium text-white">
                           Built by Aaron Edwards, founder of{' '}
-                          <Link href="http://imajinn.ai" className="underline">
+                          <Link href="https://docsbot.ai" className="underline">
+                            DocsBot AI
+                          </Link>
+                          ,{' '}
+                          <Link href="https://imajinn.ai" className="underline">
                             Imajinn AI
                           </Link>
                           ,{' '}
@@ -406,7 +410,7 @@ export default function Home() {
                           <Link href="https://web3wp.com" className="underline">
                             Web3 WP
                           </Link>
-                          . Chief Technology Officer at{' '}
+                          . Formerly CTO at{' '}
                           <Link
                             href="https://wpmudev.com"
                             className="underline"
